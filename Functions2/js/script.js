@@ -41,7 +41,7 @@ function square(size) {
     }
     console.log(string);
 }
-// square(+prompt("enter num"));
+square(+prompt("enter num"));
 
 // ----------------------------------------------------
 
