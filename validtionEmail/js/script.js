@@ -1,44 +1,45 @@
 function isEmailValid(email) {
-    let strudelCnt = 0, dotCnt = 0, strudelLocation;
+    let strudelCnt = 0, dotCnt = 0, strudelLocation=0;
     for (let i = 0; i < email.length; i++){
         if (email[i] == '@') {
             strudelLocation = i;
             strudelCnt++;
         }
         if (email[i] == ' ') {
-            return "Invalid email";
+            return "false";
         }
     }
     if (strudelCnt != 1)
-        return "Invalid email";
+        return "false";
     if (email[0] == '@') {
-        return "Invalid email";
+        return "false";
     }
+
+    for (let i = 0; i < email.length || email[i]=='@'; i++){
+        if(email[i]=='?')
+        return "false"
+    }
+    
     i = 0;
-    while (email[i] != '@') {
-        if (email[i] == '?') {
-            return "Invalid email";
-        }
-    }
     for (i = strudelLocation; i < email.length; i++) {
         if (email[i] == '_') {
-            return "Invalid email";
+            return "false";
         }
         if (email[i] == '.') {
             dotCnt++;
         }
     }
     if (dotCnt == 0) {
-        return "Invalid email";
+        return "false";
     }
     for (let i = 0; i < email.length; i++) {
         if (email[i] == '@') {
-            if (i <= 64) {
-                return "Invalid email";
+            if (i >= 64) {
+                return "false";
             }
         }
     }
-    return "valid email";
+    return "true";
 }
 
 let test = isEmailValid(prompt("enter your email"));
