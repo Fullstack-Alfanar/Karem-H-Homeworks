@@ -1,0 +1,13 @@
+.container{
+    text-align: center;
+}
+
+.textBox{
+    width: 10px;
+    height: 10px;
+}
+
+.bnt{
+    text-align: center;
+    padding: 20px;
+}
