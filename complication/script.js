@@ -10,5 +10,5 @@ function sort(arr) {
     }
     console.log(arr);
 }
-let arr1=[10,4,30,13,9,17,2,24,11,23,5,7];
+let arr1=[10,4,30,7,13,9,17,2,-3,24,10,23,5,7];
 sort(arr1);
